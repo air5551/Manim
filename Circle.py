@@ -1,5 +1,4 @@
 from manim import * #type: ignore
-from pathops import Direction
 # Global Variables
 # the type: Ignores is because Pyright is dumb
 tri = Triangle()
