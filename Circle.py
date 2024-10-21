@@ -1,6 +1,7 @@
 from manim import * #type: ignore
 from pathops import Direction
 # Global Variables
+# the type: Ignores is because Pyright is dumb
 tri = Triangle()
 circle = Circle()
 square = Square()
@@ -52,10 +53,8 @@ class Rotation(Scene):
         tri4.next_to(square, direction=LEFT, buff=0.5)
         tri.next_to(square, buff=0.5)
         self.play(Create(square))
-        self.play(Create(tri))
-        self.play(Create(tri2))
-        self.play(Create(tri3))
-        self.play(Create(tri4))
+        self.play(Create(tri), Create(tri3))
+        self.play(Create(tri4), Create(tri2))
         self.play(square.animate.rotate(PI/4)) #type: ignore
         self.play(tri.animate.rotate_about_origin(deg), #type: ignore
         tri2.animate.rotate_about_origin(deg), # type:ignore 
