@@ -138,7 +138,6 @@ venv.bak/
 
 # mkdocs documentation
 /site
-manim.cfg
 # mypy
 .mypy_cache/
 .dmypy.json
