@@ -89,3 +89,12 @@ class Rect(Scene):
         rectangle.set_fill(color=GREEN, opacity=0.5)
         self.play(Create(rectangle))
         self.play(rectangle.animate.rotate(PI/4)) #type: ignore
+        
+
+class DarkThemeBanner(Scene):
+    def construct(self):
+        banner = ManimBanner()
+        self.play(banner.create())
+        self.play(banner.expand())
+        self.wait()
+        self.play(Unwrite(banner))
