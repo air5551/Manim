@@ -63,6 +63,13 @@ class Rotation(Scene):
             tri3.animate.rotate(PI), #type: ignore
             tri4.animate.rotate(-deg)) #type: ignore
         self.play(FadeToColor(square, color=WHITE))# type: ignore
+        self.wait(duration=1)
+        self.play(Unwrite(square))
+        self.play(
+            Unwrite(tri), 
+            Unwrite(tri2), 
+            Unwrite(tri3), 
+            Unwrite(tri4))
         
 class Align(Scene):
     def construct(self):
