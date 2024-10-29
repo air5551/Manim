@@ -34,7 +34,8 @@ class Transformations(Scene):
 
 class Rotation(Scene):
     def construct(self):
-        deg = 1.570796327 
+        deg = DEGREES=90
+        #This is 90 degress in Radins (and remember that radians are the devil)
         tri2 = Triangle()
         tri3 = Triangle()
         tri4 = Triangle()
@@ -49,8 +50,8 @@ class Rotation(Scene):
         tri4.set_color(ORANGE)
         tri2.next_to(square, direction=DOWN, buff=0.5)
         tri3.next_to(square, direction=UP, buff=0.5)
-        tri4.next_to(square, direction=LEFT, buff=0.5)
-        tri.next_to(square, buff=0.5)
+        tri4.next_to(square, direction=LEFT, buff=0.4)
+        tri.next_to(square, buff=0.4)
         self.play(Create(square))
         self.play(Create(tri), Create(tri3))
         self.play(Create(tri4), Create(tri2))
