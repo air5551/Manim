@@ -1,4 +1,5 @@
 from manim import * #type: ignore
+from manim.utils.color.XKCD import LIGHTAQUA #type: ignore
 # Global Variables
 # the type: Ignores is because Pyright is dumb
 tri = Triangle()
@@ -34,20 +35,25 @@ class Transformations(Scene):
 
 class Rotation(Scene):
     def construct(self):
-        deg = DEGREES=90
-        #This is 90 degress in Radins (and remember that radians are the devil)
+        deg = 1.570796327
+        #This is 90 degress in Radians (and remember that radians are the devil)
+        tricolor = GREEN
         tri2 = Triangle()
+        tri2color = LIGHTAQUA
         tri3 = Triangle()
+        tri3color = LIGHT_PINK
         tri4 = Triangle()
-        square.set_fill(BLUE, opacity=0.5)
-        tri.set_fill(GREEN,opacity=0.5)
-        tri2.set_fill(RED,opacity=0.5)
-        tri3.set_fill(BLUE,opacity=0.5)
-        tri4.set_fill(ORANGE,opacity=0.5)
+        tri4color = ORANGE
+        square.set_fill(WHITE, opacity=0.5)
+        tri.set_fill(LIGHT,opacity=0.5)
+        tri2.set_fill(tri2color,opacity=0.5)
+        tri3.set_fill(tri3color,opacity=0.5)
+        tri4.set_fill(tri4color,opacity=0.5)
+        #This sets the Lines Colors
         tri.set_color(GREEN)
-        tri2.set_color(RED)
-        tri3.set_color(BLUE)
-        tri4.set_color(ORANGE)
+        tri2.set_color(tri2color)
+        tri3.set_color(tri3color)
+        tri4.set_color(tri4color)
         tri2.next_to(square, direction=DOWN, buff=0.5)
         tri3.next_to(square, direction=UP, buff=0.5)
         tri4.next_to(square, direction=LEFT, buff=0.4)
