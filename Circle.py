@@ -1,5 +1,7 @@
 from manim import * #type: ignore
-from manim.utils.color.XKCD import LIGHTAQUA #type: ignore
+from manim.utils.color.X11 import LIGHTBLUE
+from manim.utils.color.XKCD import LIGHTAQUA, PINKISH, PURPLEPINK, VERYLIGHTPINK
+from manim.utils.color.core import RGB_Tuple_Float, RGB_Tuple_Int #type: ignore
 # Global Variables
 # the type: Ignores is because Pyright is dumb
 tri = Triangle()
@@ -37,20 +39,20 @@ class Rotation(Scene):
     def construct(self):
         deg = 1.570796327
         #This is 90 degress in Radians (and remember that radians are the devil)
-        tricolor = GREEN
+        tricolor =  BLUE
         tri2 = Triangle()
-        tri2color = LIGHTAQUA
+        tri2color = tricolor
         tri3 = Triangle()
-        tri3color = LIGHT_PINK
+        tri3color = PINKISH
+        tri4color = tri3color
         tri4 = Triangle()
-        tri4color = ORANGE
-        square.set_fill(WHITE, opacity=0.5)
-        tri.set_fill(LIGHT,opacity=0.5)
+        square.set_fill(BLACK, opacity=0.5)
+        tri.set_fill(tricolor,opacity=0.5)
         tri2.set_fill(tri2color,opacity=0.5)
         tri3.set_fill(tri3color,opacity=0.5)
         tri4.set_fill(tri4color,opacity=0.5)
         #This sets the Lines Colors
-        tri.set_color(GREEN)
+        tri.set_color(tricolor)
         tri2.set_color(tri2color)
         tri3.set_color(tri3color)
         tri4.set_color(tri4color)
