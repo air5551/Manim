@@ -1,7 +1,7 @@
 from manim import * #type: ignore
 from manim.utils.color.X11 import LIGHTBLUE
 from manim.utils.color.XKCD import LIGHTAQUA, PINKISH, PURPLEPINK, VERYLIGHTPINK
-from manim.utils.color.core import RGB_Tuple_Float, RGB_Tuple_Int #type: ignore
+from manim.utils.color.core import RGB_Tuple_Float, RGB_Tuple_Int
 # Global Variables
 # the type: Ignores is because Pyright is dumb
 tri = Triangle()
@@ -65,7 +65,7 @@ class Rotation(Scene):
         self.play(Create(tri4), Create(tri2))
         self.play(square.animate.rotate(PI/4)) #type: ignore
         self.play(tri.animate.rotate_about_origin(deg), #type: ignore
-        tri2.animate.rotate_about_origin(deg), # type:ignore 
+        tri2.animate.rotate_about_origin(deg), # type: ignore 
         tri3.animate.rotate_about_origin(deg), #type: ignore
         tri4.animate.rotate_about_origin(deg))#type: ignore
         self.play(tri.animate.rotate(deg), #type: ignore
