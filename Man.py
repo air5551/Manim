@@ -20,3 +20,24 @@ class Man(Scene):
         self.play(Create(tri2))
         self.play(squ.animate.match_y(mobject=tri)) #type: ignore
         self.play(tri2.animate.match_y(mobject=squ)) #type: ignore
+
+
+class Stars(Scene):
+    def construct(self):
+        star = Star()
+        star2 = Star()
+        star3 = Star()
+        star.set_fill(color=GOLD, opacity=0.5)
+        star.set_color(GOLD)
+        star2.set_fill(color=GOLD, opacity=0.5)
+        star2.set_color(GOLD)
+        star3.set_fill(color=GOLD, opacity=0.5)
+        star3.set_color(GOLD)
+        star2.next_to(star, direction=RIGHT, buff=0.5)
+        star3.next_to(star, direction=LEFT, buff=0.5)
+        self.play(
+            Write(star),
+            Write(star2),
+            Write(star3)
+        )
+        
