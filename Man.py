@@ -40,4 +40,5 @@ class Stars(Scene):
             Write(star2),
             Write(star3)
         )
+        self.play(Rotating(star,float = 0,))
         
