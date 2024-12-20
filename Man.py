@@ -40,5 +40,13 @@ class Stars(Scene):
             Write(star2),
             Write(star3)
         )
-        self.play(Rotating(star,float = 0,))
+        self.play(Rotating(star,about_point=ORIGIN,about_edge=ORIGIN))
+class Rotating(Scene):
+    def construct(self):
+        star = Star()
+        star.
+        self.play(Write(star))
+        self.play(Rotating(star))
+
+
         
