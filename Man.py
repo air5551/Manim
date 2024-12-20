@@ -44,7 +44,7 @@ class Stars(Scene):
 class Rotating(Scene):
     def construct(self):
         star = Star()
-        star.
+        star.set_color(GREEN)
         self.play(Write(star))
         self.play(Rotating(star))
 
